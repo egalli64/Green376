@@ -31,17 +31,30 @@
 		<p>Scopri che aria tira</p>
 	</div>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="login.html">Accedi</a>
-		<a class="navbar-brand" href="presentation.html">Chi siamo</a>
+		<a class="navbar-brand" href="login.html">Accedi</a> <a
+			class="navbar-brand" href="presentation.html">Chi siamo</a>
 	</nav>
 	<section class="container mt-5">
+
 		<div class="row">
+
 			<div class="col">
-				<h1>La qualità dell'aria oggi è</h1>
-				<p>Ottima</p>
+
+				<div
+					class="rounded-circle text-center bg-success text-white card mb-3">
+
+					<h3>La qualità dell'aria oggi</h3>
+
+					<h2>Buona</h2>
+
+				</div>
+
 			</div>
+
 			<div class="col">
+
 				<div class="row">
+
 					<div class="col">
 						<h1>La quantità di Particolato</h1>
 						<p>340 g/m^3</p>
@@ -138,6 +151,123 @@
 	</div>
 
 
+	<section class="container-fluid bg-light mb-0">
+
+		<div class="pb-5 pt-3">
+
+			<h2 class="h1-responsive font-weight-bold text-center my-4">Contattaci</h2>
+
+			<p class="text-center w-responsive mx-auto mb-5">Hai qualche
+				domanda o suggerimento? Non esitare a contattarci. Il nostro team ti
+				risponderà il prima possibile</p>
+
+			<div class="row">
+
+				<div class="col-md-9 container-fluid">
+
+					<form id="contact-form" name="contact-form" action="mail"
+						method="POST">
+
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="md-form mb-0">
+
+									<input type="text" id="name" name="name" class="form-control">
+
+									<label for="name" class="">Nome</label>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="md-form mb-0">
+
+									<input type="text" id="email" name="email" class="form-control">
+
+									<label for="email" class="">Email</label>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-12">
+
+								<div class="md-form mb-0">
+
+									<input type="text" id="subject" name="subject"
+										class="form-control"> <label for="subject" class="">Soggetto</label>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-12">
+
+								<div class="md-form">
+
+									<textarea type="text" id="message" name="message" rows="2"
+										class="form-control md-textarea"></textarea>
+
+									<label for="message">Messaggio</label>
+
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</form>
+
+					<div class="text-center text-md-left">
+
+						<a class="btn btn-success"
+							onclick="document.getElementById('contact-form').submit();">Send</a>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer class="footer bg-secondary text-white">
+
+		<div class="container-fluid text-center pt-3">
+
+
+			<h5 class="text-uppercase font-weight-bold">GreenTeam Project</h5>
+
+			<p>Il GreenTeam project è una società senza fini di lucro che
+				vuole condividere con i suoi utenti la qualità dell'aria nelle
+				diverse zone di Milano</p>
+
+
+		</div>
+
+		<div class=" text-center py-3">
+			<p>&copy; 2020 Copyright: GreenTeam</p>
+
+		</div>
+
+	</footer>
 
 
 
