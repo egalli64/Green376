@@ -9,7 +9,7 @@
 <body>
 <h1>Login for "${user}" rejected</h1>
 	<p>
-		Back <a href="/Green376/index.html">home</a>
+		Back <a href="index.html">home</a>
 	</p>
 
 </body>
