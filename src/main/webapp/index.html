@@ -3,15 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="index.css">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-	crossorigin="anonymous">
+<meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+	$(document).ready(function() {
+		$('.carousel').carousel({
+			interval : 4000
+		})
+	});
+</script>
+
 <title>Green</title>
 </head>
-<body>
+
+<body style="margin-bottom: 80px;">
 	<div class="jumbotron text-center" style="margin-bottom: 0">
 		<h1>Benvenuti su GreenAir</h1>
 		<p>Scopri che aria tira</p>
@@ -53,11 +67,11 @@
 	</section>
 
 
-	<h3>Cosa respiriamo</h3>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
+				<h1>Cosa respiriamo</h1>
 				<div id="carouselExampleCaptions" class="carousel slide"
 					data-bs-ride="carousel">
 					<ol class="carousel-indicators">
@@ -68,45 +82,62 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://www.greenme.it/wp-content/uploads/2018/05/emissioni-co2-record.jpg" class="d-block w-100" alt="...">
+							<img
+								src="https://www.greenme.it/wp-content/uploads/2018/05/emissioni-co2-record.jpg"
+								class="d-block w-100">
 							<div class="carousel-caption d-none d-md-block">
-								<h5>Anidride Carbonica</h5>
-								<p>Indispensabile per la vita ma è la maggior responsabile dell'Effetto Serra.</p>
+								<h5>Anidride carbonica CO2</h5>
+								<p>Indispensabile per la vita ma è la maggior responsabile
+									dell'Effetto Serra.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="..." class="d-block w-100" alt="...">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Sulfur_dioxide_emissions_from_the_Halemaumau_vent_04-08-1_1.jpg"
+								class="d-block w-100">
 							<div class="carousel-caption d-none d-md-block">
-								<h5>Second slide label</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<h5>Anidride solforosa SO2</h5>
+								<p>La presenza di anidride solforosa nell'aria può essere
+									avvertita dalla comparsa di un sapore metallico in bocca.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="..." class="d-block w-100" alt="...">
+							<img
+								src="https://www.tecnosida.it/wp-content/uploads/2019/08/Blog-Particolato.jpg"
+								class="d-block w-100" alt="...">
 							<div class="carousel-caption d-none d-md-block">
-								<h5>Third slide label</h5>
-								<p>Praesent commodo cursus magna, vel scelerisque nisl
-									consectetur.</p>
+								<h5>Particolato</h5>
+								<p>Il particolato è uno degli inquinanti più frequenti nelle
+									aree urbane.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="https://image.3bmeteo.com/images/newarticles/w_1280/tra-i-peggiori-inquinanti-c--il-biossido-di-azoto-no2-3bmeteo-97164.jpg"
+								class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Nox</h5>
+								<p>Modo generico gli ossidi di azoto che si producono come
+									sottoprodotti durante una combustione</p>
 							</div>
 						</div>
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleCaptions"
-						role="button" data-bs-slide="prev"> <span
-						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-						class="visually-hidden">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleCaptions"
-						role="button" data-bs-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="visually-hidden">Next</span>
+					<a class="carousel-control-prev" role="button" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden"></span>
+					</a> <a class="carousel-control-next" role="button"
+						data-bs-slide="next"> <span class="carousel-control-next-icon"
+						aria-hidden="true"></span> <span class="visually-hidden"></span>
 					</a>
 				</div>
-
-
 
 			</div>
 			<div class="col"></div>
 		</div>
 	</div>
+
+
+
 
 
 
