@@ -6,6 +6,8 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <script type="text/javascript" src="loginControl.js" defer> 
+ </script>
 <title>Green</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
       </nav>
 
       <div class="container mt-5">
-        <form action="login" method="get">
+        <form action="login" method="get" id="frm1">
             <div class="form-group">
               <label for="inputUser">Utente</label>
               <input name="user" type="text" class="form-control" id="inputUser" required>
@@ -28,7 +30,7 @@
               <label for="inputPassword">Password</label>
               <input name="password" type="password" class="form-control" id="inputPassword" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button> 
           </form>
       </div>
       
