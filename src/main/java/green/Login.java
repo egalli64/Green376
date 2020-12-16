@@ -13,27 +13,28 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-		   @Override
-		    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-		    		throws ServletException, IOException {
-		        String user = request.getParameter("user");
-		        String password = request.getParameter("password");
-// TODO controllo user  password
-		        request.setAttribute("user", user);
 
-		        String url;
-		        if (user == null || password == null || user.isBlank() || password.isBlank()) {
-		            url = "/unknown.jsp";
-		        } else {
-		            url = "/logged.jsp";
-		        }
-		        request.getRequestDispatcher(url).forward(request, response);
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String user = request.getParameter("user");
+		String password = request.getParameter("password");
 		
+		// TODO controllo user  password
+		request.setAttribute("user", user);
+
+		String url;
+		if (user == null || password == null || user.isBlank() || password.isBlank()) {
+			url = "/unknown.jsp";
+		} else {
+			url = "/logged.jsp";
+		}
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-		   protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-			   
-			   doGet(request, response);
-}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doGet(request, response);
+	}
 }

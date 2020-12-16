@@ -1,3 +1,5 @@
+-- login as root and run as first
+
 drop user if exists green;
 drop schema if exists green;
 
