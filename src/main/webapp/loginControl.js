@@ -1,3 +1,4 @@
+
 document.getElementById('frm1').onsubmit = () => {
 
 	if (document.getElementById("inputUser").value.length < 6) {
