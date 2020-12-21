@@ -4,6 +4,7 @@ use green;
 
 drop table if exists recordings;
 drop table if exists stations;
+drop table if exists users;
 
 --
 -- create table stations and insert data
@@ -51,6 +52,17 @@ INSERT INTO `recordings` VALUES (12781,'2017-04-18 11:00:00',1.48000001907348,0.
 
 UNLOCK TABLES;
 
+--
+-- create table users and insert one example line (username: pippo, password: pluto)
+--
+
+create table users(
+	user_id integer primary key auto_increment,
+    username varchar(100),
+    password varchar(100)
+);
+
+insert into users (username, password) values ('pippo', 'pluto');
 
 
 
