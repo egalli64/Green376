@@ -2,38 +2,60 @@ package data;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="RECORDINGS")
 public class Recording {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "RECORDING_ID")
 	private int recoding_id;
+	@Column(name = "DATE")
 	private Date date;
+	@Column(name = "CH4")
 	private double CH4;
-	private double C0;
+	@Column(name = "CO")
+	private double CO;
+	@Column(name = "NO")
 	private double NO;
+	@Column(name = "NO_2")
 	private double NO_2;
+	@Column(name = "O_3")
 	private double O_3;
+	@Column(name = "PM10")
 	private double PM10;
+	@Column(name = "PM25")
 	private double PM25;
+	@Column(name = "SO_2")
 	private double SO_2;
-	private int station;
+	@Column(name = "STATION_ID")
+	private int station_id;
 
 	Recording(){
 		
 	}
 	
-	Recording(int recoding_id, Date date, double cH4, double c0, double nO, double nO_2, 
-			double o_3, double pM10, double pM25, double sO_2, int station) {
+	Recording(int recoding_id, Date date, double cH4, double cO, double nO, double nO_2, 
+			double o_3, double pM10, double pM25, double sO_2, int station_id) {
 		super();
 		this.recoding_id = recoding_id;
 		this.date = date;
 		CH4 = cH4;
-		C0 = c0;
+		CO = cO;
 		NO = nO;
 		NO_2 = nO_2;
 		O_3 = o_3;
 		PM10 = pM10;
 		PM25 = pM25;
 		SO_2 = sO_2;
-		this.station = station;
+		this.station_id = station_id;
 	}
 
 	public int getRecoding_id() {
@@ -54,11 +76,11 @@ public class Recording {
 	public void setCH4(double cH4) {
 		CH4 = cH4;
 	}
-	public double getC0() {
-		return C0;
+	public double getCO() {
+		return CO;
 	}
-	public void setC0(double c0) {
-		C0 = c0;
+	public void setCO(double cO) {
+		CO = cO;
 	}
 	public double getNO() {
 		return NO;
@@ -97,10 +119,10 @@ public class Recording {
 		SO_2 = sO_2;
 	}
 	public int getStation() {
-		return station;
+		return station_id;
 	}
-	public void setStation(int station) {
-		this.station = station;
+	public void setStation(int station_id) {
+		this.station_id = station_id;
 	}
 	
 	

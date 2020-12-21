@@ -1,6 +1,56 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
-.jumbotron {
-  background-image: url("https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg");
+body{
+  
+  line-height: 1.5;
+}
+
+.jumbotronProva {
+  background-image: url("https://cdn.pixabay.com/photo/2014/03/18/23/18/blue-290314_1280.jpg");
   background-size: cover;
 }
+
+.jumbotron{
+  background: lightblue !important;
+}
+
+#Title{
+  font-family: 'Lobster', cursive;
+}
+#Shadow{
+  text-shadow: 2px 2px 5px white ;
+}
+
+.fade-in {
+  animation: fadeIn ease 20s;
+  -webkit-animation: fadeIn ease 20s;
+  -moz-animation: fadeIn ease 20s;
+  -o-animation: fadeIn ease 20s;
+  -ms-animation: fadeIn ease 20s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
