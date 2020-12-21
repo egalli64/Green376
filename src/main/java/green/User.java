@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+//import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -23,8 +23,10 @@ public class User {
 	@Column(name = "PASSWORD")
 	private String password;
 	@Column(name = "EMAIL")
+	@Transient
 	private String email;
 	@Column(name = "DATA")
+	@Transient
 	private Date data;
 
 	public User() {

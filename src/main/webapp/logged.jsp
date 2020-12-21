@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Can't login</title>
+<title>Welcome</title>
 </head>
 <body>
-<h1>Login for "${user}" rejected</h1>
+<h1>Login for "${username}" accepted</h1>
 	<p>
  		Back <a href="index.html">home</a>
 	</p>

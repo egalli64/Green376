@@ -8,42 +8,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class SignUp
  */
-@WebServlet("/login")
-public class Login extends HttpServlet {
+@WebServlet("/SignUp")
+public class SignUp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String username = request.getParameter("username");
+		String user = request.getParameter("username");
 		String password = request.getParameter("password");
 		
 		// TODO controllo user  password
 		
-		// SELECT --> RS 
 		
-		UserDao ud = new UserDao();
+		
+		request.setAttribute("user", user);
 
-		boolean flag = ud.isUser(username, password);
-		
 		String url;
-		if(flag) {
-			url = "/logged.jsp";
-		} else{
+		if (user == null || password == null || user.isBlank() || password.isBlank()) {
 			url = "/unknown.jsp";
+		} else {
+			url = "/logged.jsp";
 		}
-		
-		request.setAttribute("username", username);
-//
-//		String url;
-//		if (user == null || password == null || user.isBlank() || password.isBlank()) {
-//			url = "/unknown.jsp";
-//		} else {
-//			url = "/logged.jsp";
-//		}
-		
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
@@ -52,4 +40,5 @@ public class Login extends HttpServlet {
 
 		doGet(request, response);
 	}
+
 }
