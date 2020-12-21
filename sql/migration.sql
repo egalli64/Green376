@@ -65,5 +65,4 @@ create table users(
 insert into users (username, password) values ('pippo', 'pluto');
 
 
-
     
