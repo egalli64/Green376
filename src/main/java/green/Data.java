@@ -26,9 +26,26 @@ public class Data extends HttpServlet {
 
 		List<Recording> list = rd.readByStation(station_id);
 		
-		double avg = op.avgCH4(list);
+		double avgCH4 = op.avgCH4(list);
+		double avgCO = op.avgCO(list);
+		double avgO3 = op.avgO3(list);
+		double avgSO2 = op.avgSO2(list);
+		double avgPM10 = op.avgPM10(list);
+		double avgPM25 = op.avgPM25(list);
+		double avgNO = op.avgNO(list);
+		double avgNO2 = op.avgNO2(list);
 		
-		request.setAttribute("average", avg);
+		
+		
+		request.setAttribute("averageCH4", avgCH4);
+		request.setAttribute("averageCO", avgCO);
+		request.setAttribute("averageO3", avgO3);
+		request.setAttribute("averagePM10", avgPM10);
+		request.setAttribute("averagePM25", avgPM25);
+		request.setAttribute("averageNO", avgNO);
+		request.setAttribute("averageNO2", avgNO2);
+		request.setAttribute("averageSO2", avgSO2);
+		
 		
 		request.getRequestDispatcher("result.jsp").forward(request, response);
 
