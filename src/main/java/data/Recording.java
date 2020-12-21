@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="RECORDINGS")
@@ -18,6 +19,7 @@ public class Recording {
 	@Column(name = "RECORDING_ID")
 	private int recoding_id;
 	@Column(name = "DATE")
+	@Transient
 	private Date date;
 	@Column(name = "CH4")
 	private double CH4;
