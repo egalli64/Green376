@@ -17,6 +17,6 @@
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href=".">Home</a>
       </nav>
-<h1>Login for "${user}" rejected</h1>
+<h1>Login for "${username}" rejected</h1>
 </body>
 </html>
