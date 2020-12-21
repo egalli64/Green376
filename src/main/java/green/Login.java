@@ -27,7 +27,7 @@ public class Login extends HttpServlet {
 		UserDao ud = new UserDao();
 
 		boolean flag = ud.isUser(username, password);
-		
+		System.out.println("*********"+flag);
 		String url;
 		if(flag) {
 			url = "/logged.jsp";

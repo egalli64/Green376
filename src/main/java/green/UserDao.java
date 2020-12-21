@@ -3,14 +3,17 @@ package green;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class UserDao extends Dao<User>{
+
+public class UserDao extends Dao<User> {
 	static protected final Logger LOG = LoggerFactory.getLogger(UserDao.class);
-	
-    public boolean isUser(String username, String password) {
+
+	public boolean isUser(String username, String password) {
         EntityManager em = null;
 
         try {
@@ -34,27 +37,45 @@ public class UserDao extends Dao<User>{
                 em.close();
             }
         }
+	}
         
-    }
-    
-
         
-    public User read(int id) {
-        EntityManager em = null;
+        public boolean create(User user) {
+            EntityManager em = null;
 
-        try {
-            em = JpaUtil.getEntityManager();
-            return em.find(User.class, id);
-        } catch (Exception ex) {
-            LOG.error("Can't create query: " + ex.getMessage());
-            throw ex;
-        } finally {
-            if (em != null) {
-                em.close();
+            try {
+                LOG.trace("enter");
+                em = JpaUtil.getEntityManager();
+                EntityTransaction et = em.getTransaction();
+                et.begin();
+                em.persist(user);
+                et.commit();
+                return true;
+            } catch (Exception ex) {
+                LOG.warn("Can't persist entity", ex);
+                return false;
+            } finally {
+                if (em != null) {
+                    em.close();
+                }
             }
         }
-    }
-	
+    
 
+	public User read(int id) {
+		EntityManager em = null;
+
+		try {
+			em = JpaUtil.getEntityManager();
+			return em.find(User.class, id);
+		} catch (Exception ex) {
+			LOG.error("Can't create query: " + ex.getMessage());
+			throw ex;
+		} finally {
+			if (em != null) {
+				em.close();
+			}
+		}
+	}
 
 }
