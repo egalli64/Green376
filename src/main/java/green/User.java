@@ -1,24 +1,49 @@
 package green;
 
 import java.sql.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
+
+@Entity
+@Table(name="USERS")
 public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "USER_ID")
 	private int user_id;
-	private String user_name;
+	@Column(name = "USERNAME")
+	private String username;
+	@Column(name = "PASSWORD")
 	private String password;
+	@Column(name = "EMAIL")
 	private String email;
+	@Column(name = "DATA")
 	private Date data;
 
 	public User() {
 	}
 
-	public User(int user_id, String user_name, String password, String email, Date data) {
+	public User(int user_id, String username, String password, String email, Date data) {
 		super();
 		this.user_id = user_id;
-		this.user_name = user_name;
+		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.data = data;
+	}
+
+	public User(int user_id, String username, String password) {
+		super();
+		this.user_id = user_id;
+		this.username = username;
+		this.password = password;
 	}
 
 	public Date getData() {
@@ -37,12 +62,12 @@ public class User {
 		this.user_id = user_id;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -63,6 +88,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + user_name + ", id=" + user_id + "]";
+		return "User [name=" + username + ", id=" + user_id + "]";
 	}
 }
