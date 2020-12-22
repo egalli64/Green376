@@ -38,7 +38,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgNO(List<Recording> rs) {
@@ -54,7 +56,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgNO2(List<Recording> rs) {
@@ -70,7 +74,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgSO2(List<Recording> rs) {
@@ -86,7 +92,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgO3(List<Recording> rs) {
@@ -102,7 +110,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgPM10(List<Recording> rs) {
@@ -118,7 +128,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	public double avgPM25(List<Recording> rs) {
@@ -134,7 +146,9 @@ public class Operations {
 			}		
 		}
 		
-		return result/count;
+		double value = result/count;
+		
+		return (double)Math.round(value * 100000d) / 100000d;
 	}
 	
 	
