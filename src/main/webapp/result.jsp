@@ -29,21 +29,23 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="index.html">Home<span class="sr-only">(current)</span></a></li>
-				<li class="nav-item active"><a class="nav-link"
-					href="logged.jsp">Back<span class="sr-only">(current)</span></a></li>
+					href="logged.jsp">Home<span class="sr-only">(current)</span></a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="presentation.html">Chi siamo</a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="#contact-form">Contattaci</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="sessionKiller">Logout</a></li>
+			</ul>
+			<ul class="nav justify-content-end">
+			<li class="nav-item active text-white">${user.username}</li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="jumbotron mt-5 text-dark">
 		<div class="container">
-			<h1 class="display-3 font-weight-bolder" id="Shadow">Scopri
-				l'aria che respiri</h1>
+			<h1 class="display-3 font-weight-bolder" id="Shadow">Scopri l'aria che respiri</h1>
 		</div>
 	</div>
 
