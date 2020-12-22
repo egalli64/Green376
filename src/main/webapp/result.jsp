@@ -156,7 +156,7 @@
 
 			<p>Il GreenTeam project è una società senza fini di lucro che
 				vuole condividere con i suoi utenti la qualità dell'aria nelle
-				diverse zone di Milano</p>
+				diverse zone di 上海.</p>
 
 
 		</div>
