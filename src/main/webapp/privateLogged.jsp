@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,9 +78,9 @@
 
 			<h5 class="text-uppercase font-weight-bold">GreenTeam Project</h5>
 
-			<p>Il GreenTeam project Ë una societ‡ senza fini di lucro che
-				vuole condividere con i suoi utenti la qualit‡ dell'aria nelle
-				diverse zone di Milano</p>
+			<p>Il GreenTeam project √® una societ√† senza fini di lucro che
+				vuole condividere con i suoi utenti la qualit√† dell'aria nelle
+				diverse zone di ‰∏äÊµ∑.</p>
 
 
 		</div>
