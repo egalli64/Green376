@@ -152,7 +152,26 @@ public class Operations {
 	}
 	
 	
+	public String selectAQ(double avg, int row) {
+		
+		
+		double[][] th = new double[][] {{1,2},{0.2,0.4},{5,6},{20,40},{30,40},{100,125},{25,40},{15,25}};
+		//								CH4    C0		SO2		NO    NO2	    O3		PM10	PM25
+		
+		
+		if(avg>th[row][1] ) {	
+			return "btn-danger";		
+		} else if (th[row][0]<avg && avg<th[row][1]) {
+			return "btn-warning";
+		}else {
+			return "btn-success";
+		}
+	}
 	
-	
+			
+			
+
+			
+			
 	
 }
