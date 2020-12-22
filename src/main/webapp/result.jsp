@@ -54,10 +54,13 @@
 	<div class="container-fluid" style="margin-bottom: 50px;">
 		<div class="row">
 			<div class="col"></div>
-			<div class="col mb-5 mt-5">
+			<div class="col mb-5 mt-5" style="border-left-width: 2px;border-left-style: solid;border-top-width: 2px;border-top-style: solid;border-right-width: 2px;border-right-style: solid;border-bottom-width: 2px;border-bottom-style: solid;margin-right: 0px;right: 10px;padding-right: 0px;padding-bottom: 0px;padding-top: 0px;">
+			<div style="background-color: white">
+			<h4>Legenda</h4>
 				<button type="button" class="btn btn-success">Good</button>
 				<button type="button" class="btn btn-warning">Warning</button>
 				<button type="button" class="btn btn-danger">Danger</button>
+				</div>
 			</div>
 			<div class="col"></div>
 		</div>
