@@ -2,11 +2,14 @@ package green;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+
 
 
 
@@ -77,5 +80,25 @@ public class UserDao extends Dao<User> {
 			}
 		}
 	}
+	
+	
+	public List<User> readAll() {
+        EntityManager em = null;
+
+        try {
+            em = JpaUtil.getEntityManager();
+            String jpql = "SELECT e from User e";
+            var query = em.createQuery(jpql, User.class);
+            return query.getResultList();
+           
+        } catch (Exception ex) {
+            LOG.error("Can't create query: " + ex.getMessage());
+            throw ex;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
+    }
 
 }
