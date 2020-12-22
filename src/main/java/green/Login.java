@@ -32,11 +32,16 @@ public class Login extends HttpServlet {
 		user.setPassword(password);
 
 		boolean flag = ud.isUser(username, password);
-		System.out.println("*********" + flag);
 		String url;
 		if (flag) {
+
 			session.setAttribute("user", user);
-			url = "/logged.jsp";
+			if (user.getUsername().equals("xxx") && user.getPassword().equals("yyy")) {
+				url = "/privateLogged.jsp";
+			} else {
+				url = "/logged.jsp";
+			}
+
 		} else {
 			url = "/unknown.jsp";
 		}

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-<title>Welcome</title>
+<title>Admin</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
@@ -21,9 +21,11 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		
 
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
+				
 				<li class="nav-item active"><a class="nav-link"
 					href="logged.jsp">Home<span class="sr-only">(current)</span></a></li>
 				<li class="nav-item active"><a class="nav-link"
@@ -32,17 +34,18 @@
 					href="#contact-form">Contattaci</a></li>
 				<li class="nav-item active"><a class="nav-link"
 					href="sessionKiller">Logout</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="viewUsers">Utenti</a></li>
 			</ul>
 			<ul class="nav justify-content-end">
-			<li class="nav-item active text-white">${user.username}</li>
+			<li class="nav-item active text-white">admin</li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="jumbotron mt-5 text-dark">
 		<div class="container">
-			<h1 class="display-3 font-weight-bolder" id="Shadow">Benvenuto
-				${user.username}, scopri l'aria che respiri</h1>
+			<h1 class="display-3 font-weight-bolder" id="Shadow">Bentornato, scopri l'aria che respiri</h1>
 		</div>
 	</div>
 	<section class="container-fluid">
@@ -73,9 +76,9 @@
 
 			<h5 class="text-uppercase font-weight-bold">GreenTeam Project</h5>
 
-			<p>Il GreenTeam project √® una societ√† senza fini di lucro che
-				vuole condividere con i suoi utenti la qualit√† dell'aria nelle
-				diverse zone di ‰∏äÊµ∑</p>
+			<p>Il GreenTeam project Ë una societ‡ senza fini di lucro che
+				vuole condividere con i suoi utenti la qualit‡ dell'aria nelle
+				diverse zone di Milano</p>
 
 
 		</div>

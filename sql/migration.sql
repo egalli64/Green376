@@ -62,7 +62,7 @@ create table users(
     password varchar(100)
 );
 
-insert into users (username, password) values ('pippo', 'pluto');
+insert into users (username, password) values ('pippo', 'pluto'), ('xxx', 'yyy');
 commit;
 
 
