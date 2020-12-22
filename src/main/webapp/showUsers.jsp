@@ -1,21 +1,93 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>User Table</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Users</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+		<a class="navbar-brand" href="." id="Title">GreenAir</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarsExampleDefault"
+			aria-controls="navbarsExampleDefault" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	<div>
-		<ul>
-			<c:forEach var="user" items="${viewuser}">
-				<li>${user.username},${user.password}</li>
-			</c:forEach>
-		</ul>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item active"><a class="nav-link"
+					href="privateLogged.jsp">Home<span class="sr-only">(current)</span></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="presentation.html">Chi siamo</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="#contact-form">Contattaci</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="sessionKiller">Logout</a></li>
+
+			</ul>
+			<ul class="nav justify-content-end">
+				<li class="nav-item active text-white">admin</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="jumbotron mt-5 text-dark">
+		<div class="container">
+			<h1 class="display-3 font-weight-bolder" id="Shadow">Utenti
+				registrati</h1>
+		</div>
 	</div>
+	<div class="container-fluid">
+	<div class="row">
+			<div class="col"></div>
+		<table class="col table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">User</th>
+					<th scope="col">Password</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<c:forEach var="user" items="${viewuser}">
+				<tr>
+					<th scope="row" class="count"></th>
+					<td>${user.username}</td>
+					<td>${user.password}</td>
+				</tr>
+				</c:forEach>
+			</tbody>
+			
+		</table>
+		<div class="col"></div>
+		</div>
+	</div>
+	
+	<footer class="footer bg-secondary text-white">
+		<div class="container-fluid text-center pt-3">
+			<h5 class="text-uppercase font-weight-bold">GreenTeam Project</h5>
+			<p>Il GreenTeam project è una società senza fini di lucro che
+				vuole condividere con i suoi utenti la qualità dell'aria nelle
+				diverse zone di 上海.</p>
+		</div>
+		<div class=" text-center py-3">
+			<p>&copy; 2020 Copyright: GreenTeam</p>
+		</div>
+	</footer>
+	
 </body>
 </html>
