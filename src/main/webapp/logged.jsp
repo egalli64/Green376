@@ -34,7 +34,7 @@
 					href="sessionKiller">Logout</a></li>
 			</ul>
 			<ul class="nav justify-content-end">
-			<li class="nav-item active text-white">${user.username}</li>
+				<li class="nav-item active text-white">${user.username}</li>
 			</ul>
 		</div>
 	</nav>
@@ -64,6 +64,17 @@
 		</map>
 	</section>
 
+	<iframe
+		src="https://www.meteoblue.com/it/tempo/widget/daily/shanghai_cina_1796236?geoloc=fixed&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&uv=1&humidity=0&humidity=1&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&pressure=1&layout=light"
+		frameborder="0" scrolling="NO" allowtransparency="true"
+		sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+		style="width: 378px; height: 465px"></iframe>
+	<div>
+		<!-- DO NOT REMOVE THIS LINK -->
+		<a
+			href="https://www.meteoblue.com/it/tempo/settimana/shanghai_cina_1796236?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget"
+			target="_blank">meteoblue</a>
+	</div>
 
 
 	<footer class="footer bg-secondary text-white mb-0">
