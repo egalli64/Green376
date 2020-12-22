@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Login
@@ -17,24 +18,28 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		
-		// TODO controllo user  password
-		
-		// SELECT --> RS 
-		
+
+		// TODO controllo user password
+
+		// SELECT --> RS
+
 		UserDao ud = new UserDao();
+		User user = new User();
+		user.setUsername(username);
+		user.setPassword(password);
 
 		boolean flag = ud.isUser(username, password);
-		System.out.println("*********"+flag);
+		System.out.println("*********" + flag);
 		String url;
-		if(flag) {
+		if (flag) {
+			session.setAttribute("user", user);
 			url = "/logged.jsp";
-		} else{
+		} else {
 			url = "/unknown.jsp";
 		}
-		
 		request.setAttribute("username", username);
 //
 //		String url;
@@ -43,7 +48,7 @@ public class Login extends HttpServlet {
 //		} else {
 //			url = "/logged.jsp";
 //		}
-		
+
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 

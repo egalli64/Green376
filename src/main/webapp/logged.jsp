@@ -34,7 +34,7 @@
 		</div>
 	  </nav>
   <div class="container-fluid mt-5">
-     <h1>Benvenuto utente:"${username}"</h1>
+     <h1>Benvenuto utente:"${user.username}"</h1>
 	<p>
  		Back <a href="index.html">Logout</a>
 	</p>
